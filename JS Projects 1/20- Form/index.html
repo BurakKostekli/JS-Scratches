@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="mainDiv">
+        <h1 class="title">Sign Up!</h1>
+        <form id="form" novalidate>
+            <div class="form-group">
+                <label>Name :</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required minlength="3" maxlength="20">
+            </div>
+            <div class="form-group">
+                <label>Surname :</label>
+                <input type="text" id="surname" name="surname" placeholder="Your Surname" required minlength="3" maxlength="20">
+            </div>
+            <div class="form-group">
+                <label>E-mail :</label>
+                <input type="email" id="email" name="email" placeholder="abcd@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label>Phone :</label>
+                <input type="tel" id="phone" name="phone" placeholder="555-555-5555" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </div>
+            <div class="form-group">
+                <label>Password :</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+            </div>
+            <div class="form-group">
+                <label>Password (Again) :</label>
+                <input type="password" id="repassword" name="repassword" placeholder="Re-enter your password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+            </div>
+            <div class="form-group">
+                <label>Address :</label>
+                <textarea type="text" id="address" name="address" placeholder="Your Address" rows="5"></textarea>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <div class="alertMessage">
+            <h3 id="alertTitle">Please fill in all the blanks</h3>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

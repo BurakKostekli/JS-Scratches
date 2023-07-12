@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --left-bg-color: rgba(87, 84, 236, 0.7);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --hover-width: 75%;
+    --other-width: 25%;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -20%);
+    white-space: nowrap;
+}
+
+.btn {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    font-size: 1rem;
+    padding: 20px 60px;
+    transition: 0.3s;
+}
+
+.split.left .btn:hover {
+    background-color: #4f4da9;
+    color: whitesmoke;
+    border: #4f4da9;
+}
+
+.split.right .btn:hover {
+    background-color: #0E7C10;
+    color: white;
+    border: #0E7C10;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.6s ease-out;
+}
+
+.split.left {
+    left: 0;
+    background: url("https://i4.hurimg.com/i/hurriyet/75/0x0/5ee2a0e467b0a92a78b5e68a.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.split.left::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg-color);
+    transition: all 1s ease-in-out;
+}
+
+.split.right {
+    background: url("https://pchocasi.com.tr/wp-content/uploads/2020/10/Xbox-Series-X.jpg");
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color);
+}
+
+
+
+
+
+.hover-left .left {
+    width: var(--hover-width);
+}
+
+.hover-left .right {
+    width: var(--other-width);
+}
+
+.hover-right .left {
+    width: var(--other-width);
+}
+
+.hover-right .right {
+    width: var(--hover-width);
+}
+
+@media(max-width:800px) {
+    h1 {
+        font-size: 2rem;
+        top: 30%;
+    }
+
+    .btn {
+        padding: 1.2rem;
+        width: 12rem;
+    }
+}

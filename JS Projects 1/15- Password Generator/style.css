@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1.3px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(31, 31, 31);
+    color: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.passwordContainer {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 450px;
+}
+
+.alertContainer {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background-color:rgb(17, 17, 17);
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 17px;
+    cursor: default; 
+    transition: 0.4s;
+}
+
+.passwordContainer h2 {
+    margin-top: 0px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    cursor: default;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+input {
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: 1px solid rgb(144, 110, 23);
+    padding: 5px 10px;
+    padding-left: 15px;
+    border-radius: 20px;
+    color: rgb(161, 161, 161);
+    letter-spacing: 1px;
+}
+
+i{
+    margin-top: 8px;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+i:hover {
+    opacity: 1;
+}
+
+.passwordButton {
+    font-size: 18px;
+    margin-top: 15px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(155, 155, 155);
+    color: rgb(30, 30, 30);
+    cursor: pointer;
+    letter-spacing: 1.1px;
+    transition: all 0.2s;
+}
+
+.passwordButton:hover {
+    background-color: rgb(16, 16, 16);
+    color:goldenrod;
+}
+
+.active {
+    right: -191px;
+}

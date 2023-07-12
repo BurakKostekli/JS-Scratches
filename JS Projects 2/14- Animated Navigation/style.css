@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Muli", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #d9fef6;
+    background-image: linear-gradient(to bottom,
+            #d9fef6 0%,
+            #d9fef6 50%,
+            rgb(13, 68, 29) 50%,
+            rgb(13, 68, 29) 100%);
+    overflow: hidden;
+}
+
+nav {
+    background-color: white;
+    padding: 20px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: width 0.3s ease;
+}
+
+nav.active {
+    width: 350px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    transition: width 0.3 ease;
+}
+
+nav.active ul {
+    width: 100%;
+}
+
+nav ul li {
+    transform: rotateY(-90deg);
+    opacity: 0;
+    transition: transform 0.6s ease;
+}
+
+nav.active ul li {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+nav ul a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.icon {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    color: rgb(13, 68, 29);
+}
+
+.icon .line {
+    background-color: rgb(13, 68, 29);
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.icon .line2 {
+    top: auto;
+    bottom: 10px;
+}
+
+nav.active .icon .line1 {
+    transform: rotate(-45deg) translateY(5.5px);
+}
+
+nav.active .icon .line2 {
+    transform: rotate(45deg) translateY(-5.5px);
+}

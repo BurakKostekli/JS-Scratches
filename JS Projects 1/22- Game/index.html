@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">">
+
+</head>
+<body>
+    <audio src="./music.mp3" loop></audio>
+
+    <div id="audioControl">
+        <i class="fa-solid fa-volume-high audio" id="audioButton"></i>
+    </div>
+    <i class="fa-solid fa-play" id="musicPlay"></i>
+    
+    <div class="bg"></div>
+    
+    <div class="container">
+
+        <h2 class="heading">Rock Paper Scissors</h2>
+
+        <div class="container2">
+            
+            <p>PLAYER --<span class="choice" id="playerTurn"></span> - Score : <span id="playerScore">0</span> </p>
+            <div class="icons player-icons" id="player">
+                <i class="icon fa-regular fa-hand-back-fist" id="playerRock" onclick="select('rock')"></i>
+                <i class="icon fa-regular fa-hand" id="playerPaper" onclick="select('paper')"></i>
+                <i class="icon fa-regular fa-hand-scissors" id="playerScissors" onclick="select('scissors')"></i>
+            </div>
+        </div>
+        <div class="container2">
+            <p>COMPUTER --<span id="computerTurn"></span> - Score : <span id="computerScore">0</span> </p>
+            <div class="icons computer-icons" id="computer">
+                <i class="icon fa-regular fa-hand-back-fist" id="computerRock"></i>
+                <i class="icon fa-regular fa-hand" id="computerPaper"></i>
+                <i class="icon fa-regular fa-hand-scissors" id="computerScissors"></i>
+            </div>
+        </div>
+        <div class="footer">
+            <i class="fa-solid fa-arrow-rotate-left" onclick="resetAll()"></i>
+            <h2 id="resultText"></h2>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

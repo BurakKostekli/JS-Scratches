@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(94, 181, 236);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg {
+    background-image: url(./resim.gif);
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.container {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    min-width:530px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    font-size: 50px;
+}
+
+.container2 {
+    width: 80%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container2 p {
+    font-size: 30px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer i {
+    font-size: 40px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.footer h2 {
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.audio {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    z-index: 5;
+    font-size: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.closed {
+    z-index: -10;
+}
+
+#musicPlay {
+    position: fixed;
+    z-index: 10;
+    font-size: 30px;
+    cursor: pointer;
+    right: 80px;
+    top: 30px;
+}
+
+
+
+/* icon renkleri */
+
+.selected {
+    color: white !important;
+}

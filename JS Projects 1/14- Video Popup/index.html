@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Popup</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="mainContainer">
+        <img src="https://thatsgame.net/wp-content/uploads/2023/03/minecraft-koylu.jpg" alt="köylü">
+        <h1 class="heading">Saf Acının Gerçek Sesi</h1>
+        <p>Köyü yanan garibanın acı kaderi...</p>
+        <button class="watchButton">Hemen izle!</button>
+    </div>
+
+    <div class="videoContainer active" id="video">
+        <video src="./hüzün.mp4" controls id="popupVideo"></video>
+        <i class="fa-solid fa-xmark fa-2xl" id="closeButton"></i>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

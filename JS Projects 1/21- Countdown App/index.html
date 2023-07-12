@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="remainingDiv" id="remainingDiv">
+            <h1>Countdown</h1>
+            <form class="form" id="remainingForm">
+                <label>Choose Date</label>
+                <input type="date" name="date" id="date-picker">
+                <button id="ask">How much time left?</button>
+            </form>
+        </div>
+
+        <div class="remainingDiv timeDiv" id="timeDiv" style="display: none;">
+            <h1>Remaining</h1>
+            <ul>
+                <li><span>10</span>Day</li>
+                <li><span>10</span>hour</li>
+                <li><span>10</span>minute</li>
+                <li><span>10</span>second</li>
+            </ul>
+            <button id="resetButton">Reset</button>
+        </div>
+
+        <div class="remainingDiv" id="complete" style="display: none;">
+            <h1>It's time!</h1>
+            <button id="completeButton">Again</button>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
